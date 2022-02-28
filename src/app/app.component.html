@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div>
+  <h3>Hello to Angular training</h3>
+  {{ title }}
+</div>
+<div>
+  Months :
+  <select #month (change) = "changeMonths($event)">
+    <option *ngFor="let i of months">{{ i }}</option>
+  </select>
+</div>
+<div>
+  <p *ngIf="isavailable">Condition is valid</p>
+  <button (click)="clickFunction()">click me</button>
+</div>
+
+<!-- {{title}}
+    
+<input [(ngModel)]='firstname'> 
+<input [(ngModel)]='lastname'>  -->
+<app-new-cmp></app-new-cmp>
+<app-new-cmp></app-new-cmp>
+<app-new-cmp></app-new-cmp>
+<app-new-cmp></app-new-cmp>
+<!-- 
+home and print the new compoennt  -->
