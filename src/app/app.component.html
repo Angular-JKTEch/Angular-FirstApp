@@ -1,6 +1,11 @@
 <app-header></app-header>
+<app-new-cmp (newItemEvent)="addItem($event)" [size] = "totalSize"></app-new-cmp>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
 
-<div>
+
+<!-- <div>
   <h3>Hello to Angular training</h3>
   {{ title }}
 </div>
@@ -13,15 +18,12 @@
 <div>
   <p *ngIf="isavailable">Condition is valid</p>
   <button (click)="clickFunction()">click me</button>
-</div>
+</div> -->
 
 <!-- {{title}}
     
 <input [(ngModel)]='firstname'> 
 <input [(ngModel)]='lastname'>  -->
-<app-new-cmp></app-new-cmp>
-<app-new-cmp></app-new-cmp>
-<app-new-cmp></app-new-cmp>
-<app-new-cmp></app-new-cmp>
+
 <!-- 
 home and print the new compoennt  -->

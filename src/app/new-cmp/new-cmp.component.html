@@ -1,3 +1,7 @@
 <p>
-  new-cmp works!
+ The Size of Kuttum Minar is {{size}}
 </p>
+
+<label for="item-input">Add an item</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parents list</button>

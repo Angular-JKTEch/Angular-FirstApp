@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit,Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-new-cmp',
@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-cmp.component.css'] 
 })
 export class NewCmpComponent implements OnInit {
+
+  @Input() size = " "; // decorate the property with input 
+
+  @Output() newItemEvent = new EventEmitter<string>();
+
+  addNewItem(value:string) {
+    this.newItemEvent.emit(value);
+  } // all items will be in string 
 
   constructor() { }
 
