@@ -1,1 +1,9 @@
-<h1 style="border: 10;"> This is the Header</h1>
+<h1 [style.color]="'blue'" [style.text-align] = "'center'"> Welcome to the page</h1>
+<h2 [style.background-color] = "'grey'" [style.text-align] = "'center'"> Mr/Mrs {{name}}</h2>
+<h3>Whos age is {{age}}</h3>
+<h1>{{books.price}}</h1> 
+<button [style.color] = "status=='error'?'red': 'blue'"> status indicator </button>
+
+<button [style.color] = "getColor()">Functional button </button>
+<button [style.fontSize.px] ="'20'">ButtonBig</button> 
+<p [style.color]="getColor()" [style.font.size.px] = "'20'" [style.text-align] = "'center'" [style.background-color] = "status=='error' ? 'red' : 'blue'">This is a paragraph that has multiple styling elements </p> 
