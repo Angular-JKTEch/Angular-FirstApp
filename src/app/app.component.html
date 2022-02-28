@@ -1,8 +1,12 @@
 <app-header></app-header>
-<app-new-cmp (newItemEvent)="addItem($event)" [size] = "totalSize"></app-new-cmp>
+<app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
+<div [style.font-size.px]= "fontSizePx"></div>
+
+<!-- this is the code to run our output and input decorator  -->
+<!-- <app-new-cmp (newItemEvent)="addItem($event)" [size] = "totalSize"></app-new-cmp>
 <ul>
   <li *ngFor="let item of items">{{item}}</li>
-</ul>
+</ul> -->
 
 
 <!-- <div>

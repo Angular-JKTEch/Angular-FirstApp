@@ -5,13 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
-import { HeaderComponent } from './header/header.component'; // we didnt write this line 
+import { HeaderComponent } from './header/header.component';
+import { SizerComponent } from './sizer/sizer.component'; // we didnt write this line 
 
 @NgModule({
   declarations: [ // all the components created 
     AppComponent,
     NewCmpComponent,
-    HeaderComponent  // also it was automatically added  
+    HeaderComponent,
+    SizerComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,

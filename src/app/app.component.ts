@@ -6,20 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  fontSizePx = 16;
   totalSize = "200ft"
 
   items = ['item1'];
   addItem(newItem:string){
     this.items.push(newItem);
   }
-  
-  
- 
-  
-  
-  
-  
-  
   title = "This is our Angular PROgram";
 
   months = [ "Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct" , "November", "Dec"]
