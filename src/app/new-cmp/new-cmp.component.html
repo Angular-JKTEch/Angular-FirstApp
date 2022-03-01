@@ -1,7 +1,10 @@
-<p>
+<!-- <p>
  The Size of Kuttum Minar is {{size}}
 </p>
 
 <label for="item-input">Add an item</label>
 <input type="text" id="item-input" #newItem>
-<button type="button" (click)="addNewItem(newItem.value)">Add to parents list</button>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parents list</button> -->
+<div [ngClass]="isSpecial ? 'special' : ' '">This is the special div</div>
+<div [ngClass]="currentClasses" > This Div is intially saveable , unchanged and special </div>
+<div [ngStyle] = "currentStyle">This div is initially italic , normal weight and extra large (24 px)</div>
