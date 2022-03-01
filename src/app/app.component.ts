@@ -16,7 +16,7 @@ export class AppComponent {
   title = "This is our Angular PROgram";
 
   months = [ "Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct" , "November", "Dec"]
-  isavailable = true;
+  isavailable = true ;
 
   clickFunction() {
     alert("this button has been clicked!")

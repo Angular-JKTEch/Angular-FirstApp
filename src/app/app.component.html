@@ -1,6 +1,9 @@
-<app-header></app-header>
-<app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
-<div [style.font-size.px]= "fontSizePx"></div>
+<!-- <app-header></app-header> -->
+
+
+
+<!-- <app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
+<div [style.font-size.px]= "fontSizePx"></div> this will mount the sizer component  -->
 
 <!-- this is the code to run our output and input decorator  -->
 <!-- <app-new-cmp (newItemEvent)="addItem($event)" [size] = "totalSize"></app-new-cmp>
@@ -9,7 +12,7 @@
 </ul> -->
 
 
-<!-- <div>
+<div style="text-align: center">
   <h3>Hello to Angular training</h3>
   {{ title }}
 </div>
@@ -19,10 +22,57 @@
     <option *ngFor="let i of months">{{ i }}</option>
   </select>
 </div>
-<div>
+<!-- <div>
   <p *ngIf="isavailable">Condition is valid</p>
   <button (click)="clickFunction()">click me</button>
 </div> -->
+<div>
+  <span *ngIf="isavailable; then condition1 else condition2"></span> 
+  <ng-template #condition1>Tickets are avaiable for the match</ng-template>
+  <ng-template #condition2>Tickets are not avaiable for the match</ng-template> 
+  <!-- enables us to add more functionality directly into our html file -->
+</div>
+
+
+<ng-template #sayHelloTemplate>
+  <p>Say hello</p>
+</ng-template>
+<ng-template #testTemplate>
+  <h1>This is a test template</h1>
+
+</ng-template>
+
+<div *ngTemplateOutlet="testTemplate">
+
+</div>
+<ng-template let-class="class" #classTemplate>
+  <p>The class of this seat is  {{class}}</p>
+</ng-template>
+
+<ng-template let-price="price" #priceTemplate>
+  <p>The price of the ticket is {{price}}</p>
+</ng-template>
+<ng-container [ngTemplateOutlet]="classTemplate"
+  [ngTemplateOutletContext] = "{class:'Gold'}">
+</ng-container>
+
+<ng-container [ngTemplateOutlet]="priceTemplate"
+  [ngTemplateOutletContext] = "{price:'1000'}">
+</ng-container>
+<ng-container [ngTemplateOutlet]="classTemplate"
+  [ngTemplateOutletContext] = "{class:'Diamond'}">
+</ng-container>
+<ng-container [ngTemplateOutlet]="priceTemplate"
+  [ngTemplateOutletContext] = "{price:'2000'}">
+</ng-container>
+
+
+<ng-container *ngTemplateOutlet="sayHelloTemplate" >
+<h1>this will not be printed </h1>
+</ng-container>
+
+
+
 
 <!-- {{title}}
     
