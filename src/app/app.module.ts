@@ -9,6 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { SizerComponent } from './sizer/sizer.component';
 import { LearnStyleComponent } from './learn-style/learn-style.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ttClassDirective } from './tt-class.directive';
+
+
+
 
 
 @NgModule({
@@ -18,7 +22,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeaderComponent,
     SizerComponent,
     LearnStyleComponent,
-    NavbarComponent  // also it was automatically added  
+    NavbarComponent,
+    ttClassDirective // also it was automatically added  
   ],
   imports: [
     BrowserModule,

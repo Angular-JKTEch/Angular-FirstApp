@@ -1,7 +1,9 @@
 <!-- <app-header></app-header> -->
 <app-navbar></app-navbar>
-<app-new-cmp></app-new-cmp>
-
+<button [ttClass]>Click me</button>
+<!-- <app-new-cmp></app-new-cmp> -->
+<!-- <app-custom-directive></app-custom-directive> -->
+<!-- <button [ttClass]= "blue">Click me</button> -->
 <!-- this is the code to run our output and input decorator  -->
 <!-- <app-new-cmp (newItemEvent)="addItem($event)" [size] = "totalSize"></app-new-cmp>
 <ul>
@@ -10,7 +12,7 @@
 
 
 <div  style="text-align: center">
-  <h3>Hello to Angular training</h3>
+  <h3 [ttClass]>Hello to Angular training</h3>
   {{ title }}
 </div>
 <app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
