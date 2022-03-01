@@ -45,26 +45,38 @@
 <div *ngTemplateOutlet="testTemplate">
 
 </div>
-<ng-template let-class="class" #classTemplate>
+<!-- <ng-template let-class="class" #classTemplate>
   <p>The class of this seat is  {{class}}</p>
+</ng-template> -->
+
+<ng-template let-price="price" let-class="class" #priceTemplate>
+  <p>This is a {{class}} class ticket and the price of the ticket is {{price}}</p>
 </ng-template>
 
-<ng-template let-price="price" #priceTemplate>
-  <p>The price of the ticket is {{price}}</p>
+<ng-template let-movie="movie" #movieTemplate>
+  <p>The name of the movie is {{movie.name}} and it is a {{movie.genre}} movie</p>
+
 </ng-template>
-<ng-container [ngTemplateOutlet]="classTemplate"
+<ng-container [ngTemplateOutlet]="movieTemplate" 
+[ngTemplateOutletContext]="{movie:{name:'Avenger', genre:'Action'}} ">
+</ng-container>
+
+<!-- <ng-container [ngTemplateOutlet]="classTemplate"
   [ngTemplateOutletContext] = "{class:'Gold'}">
+</ng-container> -->
+<ng-container *ngTemplateOutlet="priceTemplate; context:{price:'500' , class:'Silver'} " >
+  
+</ng-container>
+<ng-container [ngTemplateOutlet]="priceTemplate"
+  [ngTemplateOutletContext] = "{price:'1000' , class:'Gold'}">
+</ng-container>
+<!-- <ng-container [ngTemplateOutlet]="classTemplate"
+  [ngTemplateOutletContext] = "{class:'Diamond'}">
+</ng-container> -->
+<ng-container [ngTemplateOutlet]="priceTemplate"
+  [ngTemplateOutletContext] = "{price:'2000' , class:'Diamond'}">
 </ng-container>
 
-<ng-container [ngTemplateOutlet]="priceTemplate"
-  [ngTemplateOutletContext] = "{price:'1000'}">
-</ng-container>
-<ng-container [ngTemplateOutlet]="classTemplate"
-  [ngTemplateOutletContext] = "{class:'Diamond'}">
-</ng-container>
-<ng-container [ngTemplateOutlet]="priceTemplate"
-  [ngTemplateOutletContext] = "{price:'2000'}">
-</ng-container>
 
 
 <ng-container *ngTemplateOutlet="sayHelloTemplate" >
