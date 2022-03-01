@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  todaydate =  new Date();
+  jsonval: {name:"Nishant", age:32, beenTo: {city1: "Kolkata", city2: "Bangalore"}}
+
+
+
+
+
   fontSizePx = 16;
   totalSize = "200ft"
 

@@ -1,6 +1,6 @@
 <!-- <app-header></app-header> -->
 <app-navbar></app-navbar>
-<button [ttClass]>Click me</button>
+<!-- <button [ttClass]>Click me</button> uncomment this to use the ttclass directive  --> 
 <!-- <app-new-cmp></app-new-cmp> -->
 <!-- <app-custom-directive></app-custom-directive> -->
 <!-- <button [ttClass]= "blue">Click me</button> -->
@@ -12,9 +12,60 @@
 
 
 <div  style="text-align: center">
-  <h3 [ttClass]>Hello to Angular training</h3>
-  {{ title }}
+  <h3>Hello to Angular training</h3>
+ 
 </div>
+<div>
+ <h1>lowercase pipe</h1>
+  <p>{{title| lowercase}}</p> 
+<h1> uppercase pipe</h1>
+  <p>{{title| uppercase}}</p> 
+  <h1>Currency Pipe</h1>
+  <p >{{5000.50 | currency:"USD"}}</p> 
+  <!-- // for USD -->
+  <p >{{5000.50 | currency:"USD" :true}}</p> 
+   <!-- for cureency symbol -->
+
+   <h1>Date Pipe</h1>
+   <p>{{todaydate | date: 'd/M/y'}}</p>
+   <p>{{todaydate | date: 'shortTime'}}</p>
+
+   <h1>Decimal Pipe</h1>
+   <p>{{343.7766555 | number: '3.4-4'}}</p>
+ 
+   <h1>JSON pipe</h1>
+   <p>{{jsonval | json}}</p>
+   <h1>Percent Pipe</h1>
+   <p>{{00.545653 | percent}}</p>
+   <h1>Slice Pipe</h1>
+   <p>{{months | slice:2:6}}</p>
+
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
 <div [style.font-size.px]= "fontSizePx"></div> 
 <div>
