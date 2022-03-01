@@ -2,8 +2,8 @@
 
 
 
-<!-- <app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
-<div [style.font-size.px]= "fontSizePx"></div> this will mount the sizer component  -->
+<app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
+<div [style.font-size.px]= "fontSizePx"></div> 
 
 <!-- this is the code to run our output and input decorator  -->
 <!-- <app-new-cmp (newItemEvent)="addItem($event)" [size] = "totalSize"></app-new-cmp>
@@ -12,7 +12,7 @@
 </ul> -->
 
 
-<div style="text-align: center">
+<div  style="text-align: center">
   <h3>Hello to Angular training</h3>
   {{ title }}
 </div>
@@ -77,11 +77,11 @@
   [ngTemplateOutletContext] = "{price:'2000' , class:'Diamond'}">
 </ng-container>
 
+<app-learn-style></app-learn-style>
 
 
-<ng-container *ngTemplateOutlet="sayHelloTemplate" >
-<h1>this will not be printed </h1>
-</ng-container>
+
+
 
 
 
