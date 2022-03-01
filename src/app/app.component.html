@@ -1,6 +1,5 @@
 <!-- <app-header></app-header> -->
-
-
+<app-head></app-head>
 
 <app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
 <div [style.font-size.px]= "fontSizePx"></div> 
@@ -77,7 +76,9 @@
   [ngTemplateOutletContext] = "{price:'2000' , class:'Diamond'}">
 </ng-container>
 
-<app-learn-style></app-learn-style>
+<app-learn-style >
+  
+</app-learn-style>
 
 
 
