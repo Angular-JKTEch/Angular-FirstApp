@@ -1,8 +1,6 @@
 <!-- <app-header></app-header> -->
-<app-head></app-head>
+<app-navbar></app-navbar>
 
-<app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
-<div [style.font-size.px]= "fontSizePx"></div> 
 
 <!-- this is the code to run our output and input decorator  -->
 <!-- <app-new-cmp (newItemEvent)="addItem($event)" [size] = "totalSize"></app-new-cmp>
@@ -15,6 +13,8 @@
   <h3>Hello to Angular training</h3>
   {{ title }}
 </div>
+<app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
+<div [style.font-size.px]= "fontSizePx"></div> 
 <div>
   Months :
   <select #month (change) = "changeMonths($event)">
@@ -76,9 +76,6 @@
   [ngTemplateOutletContext] = "{price:'2000' , class:'Diamond'}">
 </ng-container>
 
-<app-learn-style >
-  
-</app-learn-style>
 
 
 

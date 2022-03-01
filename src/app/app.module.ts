@@ -8,7 +8,8 @@ import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { HeaderComponent } from './header/header.component';
 import { SizerComponent } from './sizer/sizer.component';
 import { LearnStyleComponent } from './learn-style/learn-style.component';
-import { HeadComponent } from './head/head.component'; // we didnt write this line 
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [ // all the components created 
@@ -17,7 +18,7 @@ import { HeadComponent } from './head/head.component'; // we didnt write this li
     HeaderComponent,
     SizerComponent,
     LearnStyleComponent,
-    HeadComponent  // also it was automatically added  
+    NavbarComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,

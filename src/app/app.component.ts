@@ -13,7 +13,7 @@ export class AppComponent {
   addItem(newItem:string){
     this.items.push(newItem);
   }
-  title = "This is our Angular PROgram";
+  title = "This is our Angular Program";
 
   months = [ "Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct" , "November", "Dec"]
   isavailable = true ;
