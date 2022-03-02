@@ -15,16 +15,17 @@
   <h3>Hello to Angular training</h3>
  
 </div>
-<div>
+<app-employee-list></app-employee-list>
+<!-- <div>
  <h1>lowercase pipe</h1>
   <p>{{title| lowercase}}</p> 
 <h1> uppercase pipe</h1>
   <p>{{title| uppercase}}</p> 
   <h1>Currency Pipe</h1>
   <p >{{5000.50 | currency:"USD"}}</p> 
-  <!-- // for USD -->
+ 
   <p >{{5000.50 | currency:"USD" :true}}</p> 
-   <!-- for cureency symbol -->
+  
 
    <h1>Date Pipe</h1>
    <p>{{todaydate | date: 'd/M/y'}}</p>
@@ -42,53 +43,32 @@
    <h1>This is our square root pipe custom made</h1>
    <p>{{25 | sqrt}}</p>
 
-</div> 
-
-
- 
+</div>  -->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
+<!-- <app-sizer [(size)]= "fontSizePx" (sizeChange) = "fontSizePx=$event"></app-sizer>
 <div [style.font-size.px]= "fontSizePx"></div> 
 <div>
   Months :
   <select #month (change) = "changeMonths($event)">
     <option *ngFor="let i of months">{{ i }}</option>
   </select>
-</div>
+</div> -->
 <!-- <div>
   <p *ngIf="isavailable">Condition is valid</p>
   <button (click)="clickFunction()">click me</button>
 </div> -->
-<div>
+<!-- <div>
   <span *ngIf="isavailable; then condition1 else condition2"></span> 
   <ng-template #condition1>Tickets are avaiable for the match</ng-template>
   <ng-template #condition2>Tickets are not avaiable for the match</ng-template> 
-  <!-- enables us to add more functionality directly into our html file -->
-</div>
+ 
+</div> -->
+ <!-- enables us to add more functionality directly into our html file -->
 
 
-<ng-template #sayHelloTemplate>
+<!-- <ng-template #sayHelloTemplate>
   <p>Say hello</p>
 </ng-template>
 <ng-template #testTemplate>
@@ -98,12 +78,12 @@
 
 <div *ngTemplateOutlet="testTemplate">
 
-</div>
+</div> -->
 <!-- <ng-template let-class="class" #classTemplate>
   <p>The class of this seat is  {{class}}</p>
 </ng-template> -->
 
-<ng-template let-price="price" let-class="class" #priceTemplate>
+<!-- <ng-template let-price="price" let-class="class" #priceTemplate>
   <p>This is a {{class}} class ticket and the price of the ticket is {{price}}</p>
 </ng-template>
 
@@ -113,23 +93,23 @@
 </ng-template>
 <ng-container [ngTemplateOutlet]="movieTemplate" 
 [ngTemplateOutletContext]="{movie:{name:'Avenger', genre:'Action'}} ">
-</ng-container>
+</ng-container> -->
 
 <!-- <ng-container [ngTemplateOutlet]="classTemplate"
   [ngTemplateOutletContext] = "{class:'Gold'}">
 </ng-container> -->
-<ng-container *ngTemplateOutlet="priceTemplate; context:{price:'500' , class:'Silver'} " >
+<!-- <ng-container *ngTemplateOutlet="priceTemplate; context:{price:'500' , class:'Silver'} " >
   
 </ng-container>
 <ng-container [ngTemplateOutlet]="priceTemplate"
   [ngTemplateOutletContext] = "{price:'1000' , class:'Gold'}">
-</ng-container>
+</ng-container> -->
 <!-- <ng-container [ngTemplateOutlet]="classTemplate"
   [ngTemplateOutletContext] = "{class:'Diamond'}">
 </ng-container> -->
-<ng-container [ngTemplateOutlet]="priceTemplate"
+<!-- <ng-container [ngTemplateOutlet]="priceTemplate"
   [ngTemplateOutletContext] = "{price:'2000' , class:'Diamond'}">
-</ng-container>
+</ng-container> -->
 
 
 

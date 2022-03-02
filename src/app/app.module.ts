@@ -10,6 +10,7 @@ import { LearnStyleComponent } from './learn-style/learn-style.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ttClassDirective } from './tt-class.directive';
 import { SqrtPipe } from './app.sqrt';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 @NgModule({
   declarations: [ // all the components created 
@@ -20,7 +21,8 @@ import { SqrtPipe } from './app.sqrt';
     LearnStyleComponent,
     NavbarComponent,
     ttClassDirective,
-    SqrtPipe  // also it was automatically added  
+    SqrtPipe,
+    EmployeeListComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
