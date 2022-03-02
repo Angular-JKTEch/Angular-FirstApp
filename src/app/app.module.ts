@@ -13,6 +13,7 @@ import { SqrtPipe } from './app.sqrt';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { MyserviceService } from './myservice.service';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   declarations: [ // all the components created 
@@ -32,7 +33,7 @@ import { MyserviceService } from './myservice.service';
     FormsModule, // you have this imported 
     HttpModule
   ],
-  providers: [MyserviceService],
+  providers: [MyserviceService, EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyserviceService } from 'app/myservice.service';
+import { EmployeeService } from 'app/employee.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -8,19 +9,15 @@ import { MyserviceService } from 'app/myservice.service';
 })
 export class EmployeeListComponent implements OnInit {
   todaydate;
-  public employees = [
-    {"id" : 1, "name" : "Nishant",  "age" : 32},
-    {"id" : 2, "name" : "Akshay",  "age" : 31},
-    {"id" : 3, "name" : "Radhika",  "age" : 30},
-    {"id" : 4, "name" : "Susie",  "age" : 28},
-    {"id" : 5, "name" : "peter",  "age" : 31},
-    {"id" : 6, "name" : "John",  "age" : 36},
-  ]
+  public employees = []
+  
 
-  constructor(private myservice: MyserviceService) { }
+  constructor(private myservice: MyserviceService, private _employeeService: EmployeeService) { }
 
   ngOnInit() {
     this.todaydate = this.myservice.showTodayDate();
+    this.employees = this._employeeService.getEmployee();
+
   }
 
 }
