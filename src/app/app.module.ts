@@ -16,6 +16,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { MyserviceService } from './myservice.service';
 import { EmployeeService } from './employee.service';
 import { FormsComponent } from './forms/forms.component';
+import { ContractFormComponent } from './contract-form/contract-form.component';
 
 @NgModule({
   declarations: [ // all the components created 
@@ -29,7 +30,8 @@ import { FormsComponent } from './forms/forms.component';
     SqrtPipe,
     EmployeeListComponent,
     EmployeeDetailsComponent,
-    FormsComponent  // also it was automatically added  
+    FormsComponent,
+    ContractFormComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
