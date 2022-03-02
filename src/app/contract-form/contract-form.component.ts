@@ -54,12 +54,18 @@ export class ContractFormComponent implements OnInit {
   get pincode(){
     return this.contractForm.get('address').get('pincode')
   }
+  
   onSubmit() {
     console.log(this.contractForm.value);
     
   }
+  
 
   ngOnInit() {
+    
   }
+ 
+  
 
 }
+

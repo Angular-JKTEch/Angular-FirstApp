@@ -1,58 +1,54 @@
 <div>
-  <form [formGroup] ="contractForm" (ngSubmit)=onSubmit() >
-    <input type="text" formControlName="firstname" placeholder="firstname"/>
-    <br/>
-    <div *ngIf ="!firstname.valid && (firstname?.dirty || firstname?.touched)">
-      <div [hidden]="!firstname.error.required">
-        First NAme is required
-      </div>
-      <div [hidden] = "!firstname.errors.minlength">
+  <form [formGroup]="contractForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="firstname" placeholder="firstname" />
+    <br />
+    <div *ngIf="!firstname.valid && (firstname?.dirty || firstname?.touched)">
+      <div [hidden]="!firstname.error.required">First NAme is required</div>
+      <div [hidden]="!firstname.errors.minlength">
         Min Length is 10 character
       </div>
     </div>
 
-    <input type="text" formControlName="lastname" placeholder="lastname">
+    <input type="text" formControlName="lastname" placeholder="lastname" />
 
     <div *ngIf="!lastname.valid && (lastname.dirty || lastname.touched)">
-      <div [hidden]="!lastname.errors.pattern">
-        Only Charecters are allowed 
-      </div>
-      <div [hidden]="!lastname.errors.maxLength">
-        Max length is 10
-      </div>
-      <div [hidden]="!lastname.error.required">
-        last NAme is required
-      </div>
-
+      <div [hidden]="!lastname.errors.pattern">Only Charecters are allowed</div>
+      <div [hidden]="!lastname.errors.maxLength">Max length is 10</div>
+      <div [hidden]="!lastname.error.required">last NAme is required</div>
     </div>
 
-    <input type="text" formControlName="email" placeholder="enter your email">
+    <input type="text" formControlName="email" placeholder="enter your email" />
 
-    <div *ngIf="!email.valid && (email.dirty|| email.touched)">
-      <div [hidden]="!email.error.required">
-     email is required
-      </div>
-      <div [hidden]="!email.errors.email">
-        invalid email
-      </div>
+    <div *ngIf="!email.valid && (email.dirty || email.touched)">
+      <div [hidden]="!email.error.required">email is required</div>
+      <div [hidden]="!email.errors.email">invalid email</div>
     </div>
-    <input type="radio" value="male" formControlName="gender">Male
-    <input type="radio" value="female" formControlName="gender">Female
+    <input type="radio" value="male" formControlName="gender" />Male
+    <input type="radio" value="female" formControlName="gender" />Female
 
-    <div *ngIf="!gender.valid && (gender.dirty|| gender.touched)">
-      <div [hidden]="!gender.error.required">
-        gender is required
-         </div>
-
+    <div *ngIf="!gender.valid && (gender.dirty || gender.touched)">
+      <div [hidden]="!gender.error.required">gender is required</div>
     </div>
 
+    <input type="checkbox" name="isMArried" formControlName="isMarried" /> is married 
+    <div *ngIf="!isMarried.valid && (isMarried.dirty || isMarried.touched)">
+      <div [hidden]="!isMarried.error.required">
+        is married is a required field
+      </div>
+    </div>
+    <input type="text" formControlName="country" placeholder="enter your country "/>
+    <div *ngIf="!country.valid && (country.dirty || country.touched)">
+      <div [hidden]="!country.error.required">
+        country is a required field
+      </div>
+    </div>
+    
 
     <p>
       <button type="submit" [disabled]="!contractForm.valid">Submit</button>
     </p>
-
   </form>
 </div>
 <div>
-  <h3>{{contractForm.value | json}}</h3>
+  <h3>{{ contractForm.value | json }}</h3>
 </div>
