@@ -12,8 +12,6 @@ export class FormsComponent implements OnInit {
   formdata;
   passwrd;
   
- 
-
   constructor() { }
 
   ngOnInit() {
