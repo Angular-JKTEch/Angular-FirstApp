@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MyserviceService } from 'app/myservice.service';
 
 @Component({
-  selector: 'app-employee-list',
-  templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  selector: 'app-employee-details',
+  templateUrl: './employee-details.component.html',
+  styleUrls: ['./employee-details.component.css']
 })
-export class EmployeeListComponent implements OnInit {
-  todaydate;
+export class EmployeeDetailsComponent implements OnInit {
   public employees = [
     {"id" : 1, "name" : "Nishant",  "age" : 32},
     {"id" : 2, "name" : "Akshay",  "age" : 31},
@@ -16,11 +14,9 @@ export class EmployeeListComponent implements OnInit {
     {"id" : 5, "name" : "peter",  "age" : 31},
     {"id" : 6, "name" : "John",  "age" : 36},
   ]
-
-  constructor(private myservice: MyserviceService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.todaydate = this.myservice.showTodayDate();
   }
 
 }

@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ttClassDirective } from './tt-class.directive';
 import { SqrtPipe } from './app.sqrt';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { MyserviceService } from './myservice.service';
 
 @NgModule({
   declarations: [ // all the components created 
@@ -22,14 +24,15 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     NavbarComponent,
     ttClassDirective,
     SqrtPipe,
-    EmployeeListComponent  // also it was automatically added  
+    EmployeeListComponent,
+    EmployeeDetailsComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
     FormsModule, // you have this imported 
     HttpModule
   ],
-  providers: [],
+  providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
