@@ -18,6 +18,8 @@ import { EmployeeService } from './employee.service';
 import { FormsComponent } from './forms/forms.component';
 import { ContractFormComponent } from './contract-form/contract-form.component';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 @NgModule({
   declarations: [ // all the components created 
@@ -32,7 +34,8 @@ import { RouterModule } from '@angular/router';
     EmployeeListComponent,
     EmployeeDetailsComponent,
     FormsComponent,
-    ContractFormComponent  // also it was automatically added  
+    ContractFormComponent,
+    NotFoundComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,13 @@ import { RouterModule } from '@angular/router';
       { 
         path: 'new-cmp',
         component: NewCmpComponent
-      }
+      },
+      { 
+        path: ' **',
+        pathMatch: 'full',
+        component: NotFoundComponent
+      },
+
     ])
   ],
   providers: [MyserviceService, EmployeeService],
