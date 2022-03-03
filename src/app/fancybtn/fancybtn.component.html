@@ -1,5 +1,5 @@
 
-<div>
+<!-- <div>
   <div>
     
     
@@ -12,7 +12,10 @@
   <div>
     <ng-content select="footer"></ng-content>
   </div>
-</div>
+</div> -->
+<ul *ngFor = 'let data of httpdata'>
+  <li>Name: {{data.name}}  Address: {{data.address.city}}</li>
+</ul>
 
 
 

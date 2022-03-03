@@ -9,12 +9,13 @@ import "rxjs/add/operator/map";
 })
 export class FancybtnComponent implements OnInit {
   constructor(private http: Http) {}
-
+  httpdata;
   ngOnInit() {
     this.http
       .get("https://jsonplaceholder.typicode.com/users")
       .map((response) => response.json())
-      .subscribe((data) => console.log(data));
+      .subscribe((data) => {this.displaydata(data)});
   }
+  displaydata(data) { this.httpdata = data;}
   
 }
