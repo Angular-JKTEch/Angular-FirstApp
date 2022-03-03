@@ -11,14 +11,17 @@
 </ul> -->
 
 
-<!-- <div  style="text-align: center">
-  <h3>Hello to Angular training</h3>
+<div  style="text-align: center">
+  <h3>welcome to Angular training</h3>
  
-</div> -->
+</div>
 <a routerLink = "contract-form">Contract form </a>
 <br/>
 <a routerLink = "new-cmp">new component </a>
-<a routerLink ="/employees"> Employee 1 </a>
+<br/>
+<a [routerLink] ="['/employees','1']"> Employee 1 </a> 
+
+<!-- <a [routerLink]="['product']" [queryParams]="{page:1, valu:2,aricle :3}"> product page 1</a> -->
 
 
 

@@ -20,6 +20,7 @@ import { ContractFormComponent } from './contract-form/contract-form.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     EmployeeDetailsComponent,
     FormsComponent,
     ContractFormComponent,
-    NotFoundComponent  // also it was automatically added  
+    NotFoundComponent,
+    ProductComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
