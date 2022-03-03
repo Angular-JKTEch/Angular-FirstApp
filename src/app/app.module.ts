@@ -19,6 +19,7 @@ import { FormsComponent } from './forms/forms.component';
 import { ContractFormComponent } from './contract-form/contract-form.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -42,22 +43,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule, // you have this imported 
     HttpModule,
     ReactiveFormsModule ,
-    RouterModule.forRoot([
-      {
-        path: 'contract-form',
-        component: ContractFormComponent
-      },
-      { 
-        path: 'new-cmp',
-        component: NewCmpComponent
-      },
-      { 
-        path: ' **',
-        pathMatch: 'full',
-        component: NotFoundComponent
-      },
-
-    ])
+    AppRoutingModule
   ],
   providers: [MyserviceService, EmployeeService],
   bootstrap: [AppComponent]
