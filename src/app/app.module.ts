@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductComponent } from './product/product.component';
+import { FancybtnComponent } from './fancybtn/fancybtn.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ProductComponent } from './product/product.component';
     FormsComponent,
     ContractFormComponent,
     NotFoundComponent,
-    ProductComponent  // also it was automatically added  
+    ProductComponent,
+    FancybtnComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
