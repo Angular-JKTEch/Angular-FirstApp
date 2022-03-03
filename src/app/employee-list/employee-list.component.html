@@ -1,6 +1,8 @@
 <h2>Employee list</h2>
 <ul *ngFor=" let employee of employees">
-  <li>{{employee.name}}</li>
+  <td>{{employee.id}}</td>
+  <a [routerLink] ="['/employees',employee.id]">{{employee.name}} </a>
+  <td>{{employee.age}}</td>
 
 </ul>
 <p>Today's Date : {{todaydate}}</p>
