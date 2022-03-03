@@ -12,11 +12,11 @@ export class ContractFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { 
     this.contractForm= this.formBuilder.group({
-      firstname: ["",[Validators.required, Validators.minLength(10)]],
-      lastname: ["",[Validators.required, Validators.maxLength(10)], Validators.pattern("[a-zA-Z]+$")],
+      firstname: ["",[Validators.required, Validators.maxLength(10)]],
+      lastname: ["",[Validators.required, Validators.maxLength(10)],],
       email: ["",[Validators.required,Validators.email]],
       gender: ["",[Validators.required]],
-      isMarried:["",[Validators.required]],
+      isMarried:[""],
       country: ["",Validators.required],
       address: this.formBuilder.group({
         city: ["",Validators.required],
