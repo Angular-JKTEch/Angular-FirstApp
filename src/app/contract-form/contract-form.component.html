@@ -14,7 +14,6 @@
     <div *ngIf="!lastname.valid && (lastname.dirty || lastname.touched)">
       <div [hidden]="!lastname.errors.pattern">Only Charecters are allowed</div>
       <div [hidden]="!lastname.errors.maxLength">Max length is 10</div>
-  
     </div>
 
     <input type="text" formControlName="email" placeholder="enter your email" />
@@ -30,54 +29,59 @@
       <div [hidden]="!gender.error.required">gender is required</div>
     </div>
 
-    <input type="checkbox" name="isMArried" formControlName="isMarried" /> is married 
-   
-    <input type="text" formControlName="country" placeholder="enter your country "/>
+    <input type="checkbox" name="isMArried" formControlName="isMarried" /> is
+    married
+
+    <input
+      type="text"
+      formControlName="country"
+      placeholder="enter your country "
+    />
     <div *ngIf="!country.valid && (country.dirty || country.touched)">
-      <div [hidden]="!country.error.required">
-        country is a required field
-      </div>
+      <div [hidden]="!country.error.required">country is a required field</div>
     </div>
 
     <div formGroupName="address">
-      <input type="text" formControlName="city" placeholder="enter your city "/>
+      <input
+        type="text"
+        formControlName="city"
+        placeholder="enter your city "
+      />
       <div *ngIf="!city.valid && (city.dirty || city.touched)">
-        <div [hidden]="!city.error.required">
-          city is a required field
-        </div>
+        <div [hidden]="!city.error.required">city is a required field</div>
       </div>
-      <input type="text" formControlName="street" placeholder="enter your street "/>
+      <input
+        type="text"
+        formControlName="street"
+        placeholder="enter your street "
+      />
       <div *ngIf="!street.valid && (street.dirty || street.touched)">
-        <div [hidden]="!street.error.required">
-          street is a required field
-        </div>
+        <div [hidden]="!street.error.required">street is a required field</div>
       </div>
-      <input type="text" formControlName="pincode" placeholder="enter your pincode "/>
+      <input
+        type="text"
+        formControlName="pincode"
+        placeholder="enter your pincode "
+      />
       <div *ngIf="!pincode.valid && (pincode.dirty || pincode.touched)">
         <div [hidden]="!pincode.error.required">
           pincode is a required field
         </div>
       </div>
-
-
-
     </div>
-    
 
     <p>
       <button type="submit" [disabled]="!contractForm.valid">Submit</button>
     </p>
   </form>
 </div>
-<div style="float: rigth ; width:50%;">
+<div style="float: rigth; width: 50%">
   <h3>Form status</h3>
-  <b>valid: </b> {{contractForm.valid}}
-  <b>invalid: </b> {{contractForm.invalid}}
-  <b>touched: </b> {{contractForm.touched}}
-  <b>untouched: </b> {{contractForm.untouched}}
-  <b>dirty: </b> {{contractForm.dirty}}
-  <b>enabled: </b> {{contractForm.enabled}}
-  <b>disabled: </b> {{contractForm.disabled}}
+  <b>valid: </b> {{ contractForm.valid }} <b>invalid: </b>
+  {{ contractForm.invalid }} <b>touched: </b> {{ contractForm.touched }}
+  <b>untouched: </b> {{ contractForm.untouched }} <b>dirty: </b>
+  {{ contractForm.dirty }} <b>enabled: </b> {{ contractForm.enabled }}
+  <b>disabled: </b> {{ contractForm.disabled }}
 </div>
 <div>
   <h3>{{ contractForm.value | json }}</h3>

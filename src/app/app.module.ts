@@ -17,6 +17,7 @@ import { MyserviceService } from './myservice.service';
 import { EmployeeService } from './employee.service';
 import { FormsComponent } from './forms/forms.component';
 import { ContractFormComponent } from './contract-form/contract-form.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [ // all the components created 
@@ -37,7 +38,17 @@ import { ContractFormComponent } from './contract-form/contract-form.component';
     BrowserModule,
     FormsModule, // you have this imported 
     HttpModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule ,
+    RouterModule.forRoot([
+      {
+        path: 'contract-form',
+        component: ContractFormComponent
+      },
+      { 
+        path: 'new-cmp',
+        component: NewCmpComponent
+      }
+    ])
   ],
   providers: [MyserviceService, EmployeeService],
   bootstrap: [AppComponent]
