@@ -69,6 +69,16 @@
     </p>
   </form>
 </div>
+<div style="float: rigth ; width:50%;">
+  <h3>Form status</h3>
+  <b>valid: </b> {{contractForm.valid}}
+  <b>invalid: </b> {{contractForm.invalid}}
+  <b>touched: </b> {{contractForm.touched}}
+  <b>untouched: </b> {{contractForm.untouched}}
+  <b>dirty: </b> {{contractForm.dirty}}
+  <b>enabled: </b> {{contractForm.enabled}}
+  <b>disabled: </b> {{contractForm.disabled}}
+</div>
 <div>
   <h3>{{ contractForm.value | json }}</h3>
 </div>
