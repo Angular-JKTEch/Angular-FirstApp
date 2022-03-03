@@ -24,6 +24,7 @@ import { ProductComponent } from './product/product.component';
 import { FancybtnComponent } from './fancybtn/fancybtn.component';
 
 
+
 @NgModule({
   declarations: [ // all the components created 
     AppComponent,
