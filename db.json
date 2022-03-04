@@ -1,8 +1,21 @@
 {
-    "users": [
-        {"firstname": "Ram",
-        "lastname": "kumar",
-        "id": 1}
-        
-    ]
+  "users": [
+    {
+      "firstname": "Ram",
+      "lastname": "kumar",
+      "id": 1
+    },
+    {
+      "firstname": "Nishant",
+      "lastname": "Gupta",
+      "id": 2
+    },
+    {
+      "firstname": "sasas",
+      "lastname": "sasa",
+      "age": 22,
+      "gender": "male",
+      "id": 3
+    }
+  ]
 }

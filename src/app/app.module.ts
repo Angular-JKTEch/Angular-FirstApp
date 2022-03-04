@@ -22,7 +22,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductComponent } from './product/product.component';
 import { FancybtnComponent } from './fancybtn/fancybtn.component';
-import { PostdemoComponent } from './postdemo/postdemo.component';
+// import { PostdemoComponent } from './postdemo/postdemo.component';
+import UserService from './UserService';
+
 
 
 
@@ -43,7 +45,7 @@ import { PostdemoComponent } from './postdemo/postdemo.component';
     NotFoundComponent,
     ProductComponent,
     FancybtnComponent,
-    PostdemoComponent  // also it was automatically added  
+    // PostdemoComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,7 @@ import { PostdemoComponent } from './postdemo/postdemo.component';
     ReactiveFormsModule ,
     AppRoutingModule
   ],
-  providers: [MyserviceService, EmployeeService],
+  providers: [MyserviceService, EmployeeService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
