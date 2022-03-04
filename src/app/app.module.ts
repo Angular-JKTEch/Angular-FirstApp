@@ -22,6 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductComponent } from './product/product.component';
 import { FancybtnComponent } from './fancybtn/fancybtn.component';
+import { PostdemoComponent } from './postdemo/postdemo.component';
 
 
 
@@ -41,7 +42,8 @@ import { FancybtnComponent } from './fancybtn/fancybtn.component';
     ContractFormComponent,
     NotFoundComponent,
     ProductComponent,
-    FancybtnComponent  // also it was automatically added  
+    FancybtnComponent,
+    PostdemoComponent  // also it was automatically added  
   ],
   imports: [
     BrowserModule,
